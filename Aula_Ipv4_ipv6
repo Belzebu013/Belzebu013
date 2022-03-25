@@ -1,0 +1,23 @@
+Endereço IPv4 e IPv6: Identifica um equipamento/modulo na rede.
+Máscara de rede: Determina a quantidade de endereços e, uma rede ou subrede.
+
+Dentro da máscara de rede 2 endereços não são validos, pois, 1 endereço é de Broadcast e 1 endereço de rede.
+
+Máscara de rede | /x  | endereços
+255.255.255.252 | /30 |   4
+255.255.255248  | /29 |   8
+255.255.255.240 | /28 |   16
+255.255.255.224 | /27 |   32
+255.255.255.192 | /26 |   64
+255.255.255.128 | /25 |   128
+255.255.255.0   | /24 |   256
+
+ex: Dado o endereço de rede 193.168.100.1/28. Determine o endereço de rede, broadcast e IP's válidos:
+
+R 16x0 = 0           193.168.100.0/28   (Rede)
+E 16x1 = 16          193.168.100.1/28
+D 16x2 = 32                Até           IP's válidos (Hosts)
+E 16x3 = 64          193.168.100.14/28
+S 16x4 = 128         193.168.100.15/28  (Broadcast)
+
+
